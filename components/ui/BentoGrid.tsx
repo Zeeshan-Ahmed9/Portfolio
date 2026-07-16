@@ -1,8 +1,12 @@
+"use client";
+
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
+import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 
 // Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 import { cn } from "@/lib/utils";
 
@@ -73,7 +77,17 @@ export const BentoGridItem = ({
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{
+        duration: 0.8,
+        delay: id * 0.1,
+        type: "spring",
+        stiffness: 70,
+        damping: 15,
+      }}
       className={cn(
         // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative
         "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
@@ -180,7 +194,7 @@ export const BentoGridItem = ({
                   }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
-                <Lottie options={defaultOptions} height={200} width={400} />
+                <Lottie options={defaultOptions} height={200} width={400} eventListeners={[]} />
               </div>
 
               <MagicButton
@@ -194,6 +208,6 @@ export const BentoGridItem = ({
           )}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

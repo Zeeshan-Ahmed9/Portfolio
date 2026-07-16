@@ -1,6 +1,7 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
@@ -8,15 +9,31 @@ import { PinContainer } from "./ui/Pin";
 const RecentProjects = () => {
   return (
     <div className="py-20">
-      <h1 className="heading">
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="heading"
+      >
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
-      </h1>
+      </motion.h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-        {projects.map((item) => (
-          <div
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+        {projects.map((item, index) => (
+          <motion.div
             key={item.id}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{
+              duration: 0.8,
+              delay: index * 0.15,
+              type: "spring",
+              stiffness: 80,
+              damping: 15,
+            }}
+            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
           >
             <PinContainer
               title="/ui.aceternity.com"
@@ -73,7 +90,7 @@ const RecentProjects = () => {
                 </div>
               </div>
             </PinContainer>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
