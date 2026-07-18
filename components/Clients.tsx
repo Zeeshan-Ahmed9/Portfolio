@@ -16,7 +16,7 @@ const Clients = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="heading"
       >
-        Kind words from{" "}
+        <span className="">Kind words from</span>{" "}
         <span className="text-purple"> satisfied clients</span>
       </motion.h1>
 

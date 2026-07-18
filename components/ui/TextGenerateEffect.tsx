@@ -30,14 +30,21 @@ export const TextGenerateEffect = ({
     return (
       <motion.div ref={scope}>
         {wordsArray.map((word, idx) => {
+          const isItalic = word.startsWith("*") && word.endsWith("*");
+          const cleanWord = isItalic ? word.slice(1, -1) : word;
           return (
             <motion.span
-              key={word + idx}
-              // change here if idx is greater than 3, change the text color to #CBACF9
-              className={` ${idx > 3 ? "text-purple" : "dark:text-white text-black"
-                } opacity-0`}
+              key={cleanWord + idx}
+              className={cn(
+                "opacity-0 transition-all duration-300",
+                isItalic
+                  ? "font-serif italic font-normal text-purple tracking-wide"
+                  : idx > 3
+                  ? "text-purple"
+                  : "dark:text-white text-black"
+              )}
             >
-              {word}{" "}
+              {cleanWord}{" "}
             </motion.span>
           );
         })}

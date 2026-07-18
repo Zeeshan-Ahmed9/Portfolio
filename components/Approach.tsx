@@ -15,7 +15,7 @@ const Approach = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="heading"
       >
-        My <span className="text-purple">approach</span>
+        <span className="">My</span>  <span className="text-purple">approach</span>
       </motion.h1>
       {/* remove bg-white dark:bg-black */}
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">

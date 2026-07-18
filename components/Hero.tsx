@@ -78,12 +78,18 @@ const Hero = () => {
           animate="show"
           className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center"
         >
-          <motion.p
+          <motion.div
             variants={itemVariants}
-            className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-md mb-4"
           >
-            Junior Fullstack Developer
-          </motion.p>
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-purple"></span>
+            </span>
+            <span className="uppercase tracking-widest text-[10px] md:text-xs text-blue-100 font-medium">
+              Junior Fullstack Developer
+            </span>
+          </motion.div>
 
           {/**
            *  Link: https://ui.aceternity.com/components/text-generate-effect
@@ -94,16 +100,17 @@ const Hero = () => {
            */}
           <motion.div variants={itemVariants} className="w-full">
             <TextGenerateEffect
-              words="Transforming Concepts into Seamless User Experiences"
+              words="Transforming *Concepts* into *Seamless* User Experiences"
               className="text-center text-[40px] md:text-5xl lg:text-6xl"
             />
           </motion.div>
 
           <motion.p
             variants={itemVariants}
-            className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl"
+            className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-xl text-blue-100 max-w-2xl"
           >
-            Hi! I&apos;m Zeeshan, a Full Stack Developer based in Karachi.
+            Hi! I&apos;m <span className="text-white font-semibold">Zeeshan</span>, a{" "}
+            <span className="text-purple font-semibold">Full Stack Developer</span> based in Karachi.
           </motion.p>
 
           <motion.a
