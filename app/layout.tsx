@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   description: "Professional Portfolio of Zeeshan - Full Stack Developer",
 };
 
+import ScrollProgress from "@/components/ScrollProgress";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,6 +30,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ScrollProgress />
           {children}
         </ThemeProvider>
       </body>

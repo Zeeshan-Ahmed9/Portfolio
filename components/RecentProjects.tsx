@@ -36,8 +36,8 @@ const RecentProjects = () => {
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
           >
             <PinContainer
-              title="/github.com/Zeeshan-Ahmed9"
-              href="https://github.com/Zeeshan-Ahmed9"
+              title={item.link.replace("https://", "").replace(/\/$/, "")}
+              href={item.link}
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div

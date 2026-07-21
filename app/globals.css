@@ -67,6 +67,10 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
   * {
     @apply border-border !scroll-smooth;
   }
@@ -75,6 +79,20 @@
   }
   button {
     @apply active:outline-none;
+  }
+  /* Custom sleek dark scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #000319;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1c1f3e;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #cbacf9;
   }
 }
 

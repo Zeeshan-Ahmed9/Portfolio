@@ -76,26 +76,30 @@ const Footer = () => {
 
         <div className="flex items-center md:gap-3 gap-6">
           {socialMedia.map((info, index) => (
-            <motion.div
+            <a
               key={info.id}
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.4,
-                delay: index * 0.1,
-                type: "spring",
-                stiffness: 100,
-                damping: 10,
-              }}
-              whileHover={{ scale: 1.15, y: -4, rotate: 5 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+              href={info.link}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <a href={info.link}>
-                <img src={info.img} alt="icons" width={20} height={20} />
-              </a>
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.4,
+                  delay: index * 0.1,
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 10,
+                }}
+                whileHover={{ scale: 1.15, y: -4, rotate: 5 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 hover:border-purple/50 transition-colors"
+              >
+                <img src={info.img} alt="social-icon" width={20} height={20} />
+              </motion.div>
+            </a>
           ))}
         </div>
       </div>
