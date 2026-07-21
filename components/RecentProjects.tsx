@@ -8,7 +8,7 @@ import { PinContainer } from "./ui/Pin";
 
 const RecentProjects = () => {
   return (
-    <div className="py-20">
+    <section id="projects" className="py-20">
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -98,7 +98,7 @@ const RecentProjects = () => {
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

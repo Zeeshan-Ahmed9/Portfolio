@@ -22,7 +22,7 @@ import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Code2, Server, Database, Cloud, Wrench, type LucideIcon } from 'lucide-react';
+import { Code2, Server, Database, Cloud, Wrench, Sparkles, type LucideIcon } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,11 +66,15 @@ const STACK: StackLayer[] = [
     accent: TOKENS.purple, // Matches primary portfolio purple
     blurb: 'What the user actually touches.',
     skills: [
-      { name: 'React', level: 92 },
-      { name: 'Next.js', level: 88 },
-      { name: 'TypeScript', level: 90 },
-      { name: 'Tailwind CSS', level: 94 },
-      { name: 'Redux Toolkit', level: 78 },
+      { name: 'HTML5', level: 92 },
+      { name: 'CSS3', level: 88 },
+      { name: 'Tailwind CSS', level: 70 },
+      { name: 'JavaScript', level: 76 },
+      { name: 'TypeScript', level: 74 },
+      { name: 'React', level: 80 },
+      { name: 'Next.js', level: 75 },
+      { name: 'GSAP', level: 50 },
+      { name: 'Framer Motion', level: 60 },
     ],
   },
   {
@@ -81,11 +85,13 @@ const STACK: StackLayer[] = [
     accent: '#6366F1', // Indigo accent
     blurb: 'Where the request gets decided.',
     skills: [
-      { name: 'Node.js', level: 90 },
-      { name: 'Express', level: 87 },
-      { name: 'NestJS', level: 75 },
-      { name: 'GraphQL', level: 72 },
-      { name: 'REST API Design', level: 88 },
+      { name: 'Node.js', level: 65 },
+      { name: 'Python', level: 50 },
+      { name: 'PHP', level: 55 },
+      { name: 'Express', level: 67 },
+      { name: 'NestJS', level: 50 },
+      { name: 'GraphQL', level: 10 },
+      { name: 'REST API Design', level: 60 },
     ],
   },
   {
@@ -96,10 +102,10 @@ const STACK: StackLayer[] = [
     accent: '#06B6D4', // Cyan accent
     blurb: 'Where the truth is kept.',
     skills: [
-      { name: 'PostgreSQL', level: 86 },
-      { name: 'MongoDB', level: 84 },
-      { name: 'Redis', level: 76 },
-      { name: 'MySQL', level: 70 },
+      { name: 'PostgreSQL', level: 40 },
+      { name: 'MongoDB', level: 70 },
+      { name: 'Redis', level: 10 },
+      { name: 'MySQL', level: 50 },
     ],
   },
   {
@@ -110,11 +116,11 @@ const STACK: StackLayer[] = [
     accent: '#EC4899', // Pink accent
     blurb: 'How it stays up in production.',
     skills: [
-      { name: 'Docker', level: 82 },
-      { name: 'AWS (EC2/S3/Lambda)', level: 75 },
-      { name: 'CI/CD (GitHub Actions)', level: 80 },
-      { name: 'Kubernetes', level: 60 },
-      { name: 'Nginx', level: 70 },
+      { name: 'Docker', level: 10 },
+      { name: 'AWS (EC2/S3/Lambda)', level: 10 },
+      { name: 'CI/CD (GitHub Actions)', level: 10 },
+      { name: 'Kubernetes', level: 10 },
+      { name: 'Nginx', level: 10 },
     ],
   },
   {
@@ -125,13 +131,28 @@ const STACK: StackLayer[] = [
     accent: '#10B981', // Emerald green accent
     blurb: 'How the work actually gets shipped.',
     skills: [
-      { name: 'Git / GitHub', level: 93 },
-      { name: 'Jest & Testing Library', level: 80 },
+      { name: 'Git / GitHub', level: 80 },
+      { name: 'Jest & Testing Library', level: 60 },
       { name: 'Figma', level: 68 },
-      { name: 'Agile / Scrum', level: 85 },
-      { name: 'Vite / Webpack', level: 78 },
+      { name: 'Agile / Scrum', level: 10 },
+      { name: 'Vite / Webpack', level: 65 },
     ],
   },
+  {
+  id: "ai",
+  label: "Layer 06",
+  title: "LLMs & AI",
+  icon: Sparkles,
+  accent: "#8B5CF6",
+  blurb: "Leveraging LLMs to accelerate development and solve complex problems.",
+  skills: [
+    { name: "OpenAI GPT", level: 85 },
+    { name: "Claude", level: 80 },
+    { name: "Gemini", level: 85 },
+    { name: "Prompt Engineering", level: 90 },
+    { name: "LLM APIs", level: 80 },
+  ],
+}
 ];
 
 // ---------------------------------------------------------------------------

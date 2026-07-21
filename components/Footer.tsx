@@ -57,7 +57,7 @@ const Footer = () => {
         </motion.p>
         <motion.a
           variants={itemVariants}
-          href="mailto:[EMAIL_ADDRESS]zeeshanahmed71210@gmail.com"
+          href="mailto:zeeshanahmed71210@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Zeeshan,"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
