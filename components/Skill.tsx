@@ -102,7 +102,7 @@ const STACK: StackLayer[] = [
     accent: '#06B6D4', // Cyan accent
     blurb: 'Where the truth is kept.',
     skills: [
-      { name: 'PostgreSQL', level: 40 },
+      { name: 'PostgreSQL', level: 56 },
       { name: 'MongoDB', level: 70 },
       { name: 'Redis', level: 10 },
       { name: 'MySQL', level: 50 },
@@ -116,11 +116,11 @@ const STACK: StackLayer[] = [
     accent: '#EC4899', // Pink accent
     blurb: 'How it stays up in production.',
     skills: [
-      { name: 'Docker', level: 10 },
-      { name: 'AWS (EC2/S3/Lambda)', level: 10 },
-      { name: 'CI/CD (GitHub Actions)', level: 10 },
-      { name: 'Kubernetes', level: 10 },
-      { name: 'Nginx', level: 10 },
+      { name: 'Docker', level: 71 },
+      { name: 'AWS (EC2/S3/Lambda)', level: 32 },
+      { name: 'CI/CD (GitHub Actions)', level: 61 },
+      { name: 'Kubernetes', level: 58 },
+      { name: 'Nginx', level: 21 },
     ],
   },
   {
